@@ -1,12 +1,14 @@
 #include <stdio.h>
-
+void updateBook();
 void displayBook();
 int autoIncrement();
 void addBook();
 void issueBook();
 void removeBook();
+void returnBook();
 void writeToFile();
 void displayIssueBook();
+//void restore();
 
 int main()
 {
@@ -21,6 +23,7 @@ int main()
         printf("3.Remove Book\n");
         printf("4.Issue Book\n");
         printf("5.Issued Book List\n");
+        printf("6.Return Book List\n");
         printf("0.Exit\n\n");
         printf("Enter your choice: ");
         scanf("%d", &ch);
@@ -53,6 +56,14 @@ int main()
             case 5:
             
             displayIssueBook();
+            break;
+            
+            
+            case 6:
+            
+            returnBook();
+            updateBook();
+            //current_book->book_quantity=current_book->book_quantity+1;
             break;
             
             
